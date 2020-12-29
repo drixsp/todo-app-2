@@ -1,16 +1,16 @@
 <template>
     <header class="header">
         <h1>Todo List</h1>
+        <br>
         <p>A sample todo list app using Vue.js framework.</p>
-        
+        <br>
         <div class="btn-group">
-            <router-link id="header-link" class="btn btn-primary" to="/">Home</router-link>
-            <router-link id="header-link" class="btn btn-primary" to="/about">About</router-link>    
+            <router-link class="btn btn-primary" to="/">Home</router-link>
+            <router-link class="btn btn-primary" to="/about">About</router-link>    
         </div>
         
     </header>    
 </template>
-
 
 <style scoped>
     *{
@@ -19,17 +19,16 @@
         margin: 0;
     }
     .header{
-        background: #002261;
-        color: #fff;
+        background: #dee9ff;
+        color:  #2b3f5c;
         text-align: center;
-        padding: 10px;
-        height: 150px;
+        padding: 20px;
+        min-height: 150px;
+        margin-top: 50px;
+        border-radius: 10px 10px 0px 0px;
     }
     .header a{
         color: #fff;
         /* padding-right: 5px; */
-    }
-    #header-link{
-        margin: auto;
     }
 </style>
