@@ -1,8 +1,14 @@
 <template>
-    <div>
-        <form @submit="addTodo">
-            <input type="text" name="title" v-model="title" placeholder="Add Todo...">
-            <input type="submit" value="Submit" class="btn">
+    <div class="add-todo">
+        <!-- <form class="add-todo-form form-inline" @submit="addTodo">
+            <input type="text" class="form-control add-todo-form">
+            <input type="text" class="btn btn-primary" value="Submit">
+        </form> -->
+        <form class="form-inline add-todo" @submit="addTodo">
+            <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control" id="inputPassword2" placeholder="Add A Task">
+            </div>
+            <button value="Submit" type="submit" class="btn btn-success mb-2"><strong>ADD</strong></button>
         </form>
     </div>
 </template>
@@ -34,16 +40,11 @@ export default {
 </script>
 
 <style scoped>
-    form{
+    .add-todo{
+        margin-top: 10px;
+        /* background-color: pink; */
         display: flex;
-    }
-
-    input[type="text"]{
-        flex: 10;
-        padding: 5px;
-    }
-
-    input[type="submit"]{
-        flex: 2;
+        justify-content: center;
+        align-content: center;
     }
 </style>

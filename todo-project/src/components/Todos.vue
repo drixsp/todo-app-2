@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-bind:key="todo.id" v-for="todo in todos">
+        <div v-bind:key="todo.id" v-for="todo in todos" class="todo-item-container">
             <TodoItem v-bind:todo="todo" v-on:del-todo="$emit('del-todo', todo.id)"/>
         </div>
     </div>
@@ -19,5 +19,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
