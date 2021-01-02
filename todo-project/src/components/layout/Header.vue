@@ -15,10 +15,23 @@
 
 <script>
 import AddTodo from '../AddTodo'
+import axios from 'axios'
 
 export default {
     components: {
         AddTodo
+    },
+    methods: {
+        addTodo(newTodo){
+        const {title, completed } = newTodo;
+
+        axios.post('https://jsonplaceholder.typicode.com/todos', {
+            title,
+            completed
+        })
+        .then(res => this.todos = [...this.todos, res.data])
+        .catch(err => console.log(err));
+    }
     }
 }
 </script>

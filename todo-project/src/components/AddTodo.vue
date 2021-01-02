@@ -4,11 +4,11 @@
             <input type="text" class="form-control add-todo-form">
             <input type="text" class="btn btn-primary" value="Submit">
         </form> -->
-        <form class="form-inline add-todo">
+        <form class="form-inline add-todo" @submit="addTodo">
             <div class="form-group mx-sm-3 mb-2">
-                <input type="text" class="form-control" id="inputPassword2" placeholder="Add Todo">
+                <input type="text" class="form-control" id="inputPassword2" placeholder="Add A Task">
             </div>
-            <button type="submit" class="btn btn-primary mb-2">Add</button>
+            <button value="Submit" type="submit" class="btn btn-success mb-2"><strong>ADD</strong></button>
         </form>
     </div>
 </template>

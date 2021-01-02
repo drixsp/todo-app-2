@@ -52,7 +52,7 @@ body{
 }
 
 .here{
-  width: 60%;
+  width: 50%;
   background-color: #e1ffd6;
   margin-top: 100px;
   padding: 50px 50px 100px 50px;
