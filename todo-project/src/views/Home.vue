@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
-    <AddTodo v-on:add-todo="addTodo" />
+    <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" class="todos"/>
+    <!-- <AddTodo v-on:add-todo="addTodo" /> -->
   </div>
 </template>
 
 <script>
 import Todos from '../components/Todos'
-import AddTodo from '../components/AddTodo'
+// import AddTodo from '../components/AddTodo'
 import axios from 'axios'
 
 export default {
   name: 'Home',
   components: {
     Todos,
-    AddTodo
+    // AddTodo
   },
   data(){
     return{
@@ -72,5 +72,9 @@ body{
 
 .btn:hover{
   background: #666;
+}
+
+.todos{
+  margin-top: 20px;
 }
 </style>

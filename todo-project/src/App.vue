@@ -1,10 +1,14 @@
 <template>
   <div id="app">
     <div class="container">
-      <div id="nav">
-        <Header />
+      <div class="here">
+        <div class="content">
+        <div id="nav">
+          <Header />
+        </div>
+        <router-view/>
       </div>
-      <router-view/>
+      </div>
     </div>
   </div>
 </template>
@@ -36,6 +40,26 @@ export default {
 body{
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.content{
+  /* width: 50%; */
+}
+
+.here{
+  width: 60%;
+  background-color: #e1ffd6;
+  margin-top: 100px;
+  padding: 50px 50px 100px 50px;
+  min-height: 50%;
+  border-radius: 10px 10px 0px 0px;
+  border-radius: 20px;
+
 }
 
 </style>

@@ -1,10 +1,14 @@
 <template>
     <div class="add-todo">
-        <form class="add-todo-form form-group" @submit="addTodo">
-            <p class="add-text">Input here</p>
-            <p class="add-btn"> Button here</p>
-            <!-- <input class="add-todo-item form-control" type="text" name="title" v-model="title" placeholder="Add Todo..."> -->
-            <!-- <input type="submit" value="Submit" class="add-todo-btn btn btn-primary"> -->
+        <!-- <form class="add-todo-form form-inline" @submit="addTodo">
+            <input type="text" class="form-control add-todo-form">
+            <input type="text" class="btn btn-primary" value="Submit">
+        </form> -->
+        <form class="form-inline add-todo">
+            <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control" id="inputPassword2" placeholder="Add Todo">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Add</button>
         </form>
     </div>
 </template>
@@ -36,45 +40,11 @@ export default {
 </script>
 
 <style scoped>
-    .add-todo-form{
-        display: flex;
-        align-items: center;
-    }
-
-    .add-btn{
-        align-self: center;
-        flex: 1;
-        background-color: green;
-    }
-    .add-text{
-        align-self: center;
-        flex: 5;
-        background: pink;
-    }
-
     .add-todo{
-        /* display: flex; */
-        /* align-items: center; */
-        justify-content: flex-start;
-        background: #f4f4f4;
-        border-bottom: 1px #ccc solid;
+        margin-top: 10px;
+        /* background-color: pink; */
+        display: flex;
+        justify-content: center;
+        align-content: center;
     }
-    form{
-        margin-left: 50px;
-        background-color: transparent;
-        /* display: flex; */
-    }
-    .form-control{
-        border: transparent;
-        background-color: #f4f4f4;
-    }
-
-    /* input[type="text"]{
-        flex: 10;
-        padding: 5px;
-    } */
-
-    /* input[type="submit"]{
-        flex: 2;
-    } */
 </style>
